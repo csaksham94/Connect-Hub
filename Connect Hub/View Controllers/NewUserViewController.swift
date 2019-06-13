@@ -105,6 +105,17 @@ class NewUserViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         self.navigationController?.navigationBar.isTranslucent = true
         
     }
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "newUserToWelcome"{
+            let secondVC = segue.destination as! WelcomeViewController
+            secondVC.name = nameTxtField.text!
+            secondVC.emailID = emailTxtField.text!
+            
+        }
+    }
     /*
     // MARK: - Navigation
 

@@ -7,9 +7,15 @@
 //
 
 import UIKit
-
+import Firebase
 class LoginViewController: UIViewController {
 
+    
+    @IBOutlet weak var userNameTxtField: UITextField!
+    @IBOutlet weak var passwordTxtField: UITextField!
+    
+    @IBOutlet weak var LoginBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tapGesture()
@@ -28,5 +34,21 @@ class LoginViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.viewTapped(gestureRecognizer:)))
         view.addGestureRecognizer(tapGesture)
     }
+    
+    @IBAction func loginBtnTapped(_ sender: Any) {
+        
+        Auth.auth().signIn(withEmail: userNameTxtField.text!, password: passwordTxtField.text!) { (user, error) in
+            if error == nil{
+                print("Success")
+            }
+            else{
+                print("False")
+            }
+        }
+        
+    }
+    
+    
+    
 }
 
