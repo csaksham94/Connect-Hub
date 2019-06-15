@@ -9,23 +9,21 @@
 import UIKit
 import Firebase
 class LoginViewController: UIViewController {
-
+    
     
     @IBOutlet weak var userNameTxtField: UITextField!
     @IBOutlet weak var passwordTxtField: UITextField!
-    
     @IBOutlet weak var LoginBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tapGesture()
-        
-        
-        // Do any additional setup after loading the view.
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
     }
+    
     @objc func viewTapped(gestureRecognizer: UITapGestureRecognizer){
         view.endEditing(true)
     }
@@ -36,7 +34,6 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginBtnTapped(_ sender: Any) {
-        
         Auth.auth().signIn(withEmail: userNameTxtField.text!, password: passwordTxtField.text!) { (user, error) in
             if error == nil{
                 print("Success")

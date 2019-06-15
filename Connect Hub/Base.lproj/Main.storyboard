@@ -271,8 +271,8 @@
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password didn't match" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZhU-QC-2Bf">
-                                        <rect key="frame" x="67" y="159.5" width="173.5" height="0.0"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="60.5" y="159.5" width="186.5" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="1" green="0.074743433492410416" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -338,7 +338,9 @@
                     </view>
                     <connections>
                         <outlet property="letsGoBtn" destination="9qA-PF-R5u" id="Rbg-YR-1uE"/>
+                        <outlet property="passwordCheckField" destination="CXn-9Y-VmR" id="5R9-5M-wsw"/>
                         <outlet property="passwordField" destination="x0F-1C-AQl" id="lRw-oM-m0F"/>
+                        <outlet property="unmatchPasswordLbl" destination="ZhU-QC-2Bf" id="bXb-j5-C7f"/>
                         <outlet property="userLabel" destination="sBT-G9-a60" id="mt7-gF-Cuh"/>
                         <outlet property="welcomeLabel" destination="pdX-4d-E0j" id="DrE-lo-VYU"/>
                     </connections>
