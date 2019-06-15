@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import ARSLineProgress
+
 class LoginViewController: UIViewController {
     
     
@@ -34,12 +36,22 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginBtnTapped(_ sender: Any) {
+        ARSLineProgress.show()
         Auth.auth().signIn(withEmail: userNameTxtField.text!, password: passwordTxtField.text!) { (user, error) in
             if error == nil{
+                ARSLineProgress.hide()
                 print("Success")
+                self.performSegue(withIdentifier: "goToLogin" , sender: self)
             }
             else{
+                print(error!)
                 print("False")
+                let alert = UIAlertController(title: "Login Error", message: "Please check the email ID/Password entered.!", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+                    print("Fail OK pressed")
+                }))
+                ARSLineProgress.hide()
+                self.present(alert, animated: true, completion: nil)
             }
         }
         

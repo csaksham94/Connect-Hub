@@ -17,6 +17,7 @@ class NewUserViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     @IBOutlet weak var dobTxtField: UITextField!
     @IBOutlet weak var rolePicker: UIPickerView!
     
+    @IBOutlet weak var backToLgnBtn: UIBarButtonItem!
     var userRole = ""
     private var dobPicker : UIDatePicker?
     var roleArray = ["Student", "Teacher", "Admin"]
@@ -106,5 +107,10 @@ class NewUserViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         
         
     }
+    
+    @IBAction func BackToLgnBtnTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     
 }
