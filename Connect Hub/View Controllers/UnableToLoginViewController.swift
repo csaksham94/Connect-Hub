@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import Firebase
+import ARSLineProgress
 
 class UnableToLoginViewController: UIViewController {
 
     @IBOutlet weak var cancelBtn: UIBarButtonItem!
     
+    @IBOutlet weak var emailIDTxtField: UITextField!
+    
+    @IBOutlet weak var resetBtn: UIButton!
     
     
     
@@ -35,14 +40,34 @@ class UnableToLoginViewController: UIViewController {
         
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func resetBtnTapped(_ sender: Any) {
+        ARSLineProgress.show()
+        Auth.auth().sendPasswordReset(withEmail: emailIDTxtField.text!) { (error) in
+            if error == nil{
+                print("Success")
+                let alert = UIAlertController(title: "Reset Email sent Successfully", message: "Please check your Email ID..!", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+                    print("Fail OK pressed")
+                }))
+                ARSLineProgress.hide().self
+                self.present(alert, animated: true, completion: nil)
+                
+            
+        
+            }
+            else {
+                print("Fail with Error : \(String(describing: error))")
+                let alert = UIAlertController(title: "Reset Email Failed", message: "Please check your Email ID..!", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+                    print("Fail OK pressed")
+                }))
+                ARSLineProgress.hide()
+                self.present(alert, animated: true, completion: nil)
+               
+            }
+        }
+        
+        
     }
-    */
 
 }
