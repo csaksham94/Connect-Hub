@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		72493CE522B2D6F500B187E5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 72493CE422B2D6F500B187E5 /* GoogleService-Info.plist */; };
+		72AF3B9922B6360F0003B4EF /* UnableToLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AF3B9822B6360F0003B4EF /* UnableToLoginViewController.swift */; };
 		72C5A9AB22B02B29000E664F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C5A9AA22B02B29000E664F /* AppDelegate.swift */; };
 		72C5A9AD22B02B29000E664F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C5A9AC22B02B29000E664F /* LoginViewController.swift */; };
 		72C5A9B022B02B29000E664F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C5A9AE22B02B29000E664F /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		1B14443E7A12B0883B33F81D /* Pods-Connect Hub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Connect Hub.debug.xcconfig"; path = "Target Support Files/Pods-Connect Hub/Pods-Connect Hub.debug.xcconfig"; sourceTree = "<group>"; };
 		72493CE422B2D6F500B187E5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		72AF3B9822B6360F0003B4EF /* UnableToLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnableToLoginViewController.swift; sourceTree = "<group>"; };
 		72C5A9A722B02B29000E664F /* Connect Hub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Connect Hub.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72C5A9AA22B02B29000E664F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72C5A9AC22B02B29000E664F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -60,7 +62,6 @@
 				1B14443E7A12B0883B33F81D /* Pods-Connect Hub.debug.xcconfig */,
 				73173C5D4CBCDC121604EFE1 /* Pods-Connect Hub.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -102,6 +103,7 @@
 				72C5A9AC22B02B29000E664F /* LoginViewController.swift */,
 				72F7824622B15DC500FA764C /* NewUserViewController.swift */,
 				72F7824822B15F1D00FA764C /* WelcomeViewController.swift */,
+				72AF3B9822B6360F0003B4EF /* UnableToLoginViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -239,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72AF3B9922B6360F0003B4EF /* UnableToLoginViewController.swift in Sources */,
 				72C5A9AD22B02B29000E664F /* LoginViewController.swift in Sources */,
 				72F7824922B15F1D00FA764C /* WelcomeViewController.swift in Sources */,
 				72F7824722B15DC500FA764C /* NewUserViewController.swift in Sources */,
