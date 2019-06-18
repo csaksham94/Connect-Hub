@@ -17,13 +17,19 @@
                     <view key="view" contentMode="scaleToFill" id="cvd-ow-IOE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IMG_1385" translatesAutoresizingMaskIntoConstraints="NO" id="On1-u3-Q1c">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="0gZ-3g-TfK"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oUK-e6-ZFg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="33" y="-648"/>
+            <point key="canvasLocation" x="31.884057971014496" y="-648.21428571428567"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -236,7 +242,7 @@
                                         <rect key="frame" x="0.0" y="134" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter City" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Shh-aZ-09b">
                                         <rect key="frame" x="0.0" y="201" width="374" height="30"/>
@@ -485,5 +491,6 @@
     <resources>
         <image name="168E3A9E-A9FB-429A-8741-5116FC1B779C" width="1080" height="1920"/>
         <image name="IMG_1337" width="1080" height="1920"/>
+        <image name="IMG_1385" width="1080" height="1920"/>
     </resources>
 </document>

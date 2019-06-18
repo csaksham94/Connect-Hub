@@ -19,23 +19,26 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var passwordCheckField: UITextField!
     
-    var name = ""
-    var emailID = ""
+    var userDict = [String : Any]()
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tapGesture()
         makeNavBarTransparent()
         configPageDisplay()
+        print(userDict)
 
     }
     
     
     func configPageDisplay(){
-        
-        userLabel.text = "\(emailID)"
-        print(emailID)
-        welcomeLabel.text = "\(name)"
+       
+        userLabel.text = "\(String(describing: userDict["userEmail"]!))"
+
+        welcomeLabel.text = "\(String(describing: userDict["username"]!))"
         
     }
     
@@ -60,7 +63,8 @@ class WelcomeViewController: UIViewController {
         ARSLineProgress.show()
         Auth.auth().createUser(withEmail: userName, password: pass) { (user, error) in
             if error == nil{
-                
+            
+                self.storingDataToFirebase()
                 print("Success")
                 let alert = UIAlertController(title: "Registration Successful", message: "Please continue to login..!!", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
@@ -81,6 +85,17 @@ class WelcomeViewController: UIViewController {
                 
             }
         }
+        
+        
+    }
+    
+    
+    func storingDataToFirebase(){
+        
+    
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        ref.child("users").child(userDict["username"]! as! String).setValue(userDict)
         
         
     }

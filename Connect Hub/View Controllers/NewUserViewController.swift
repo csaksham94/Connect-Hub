@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class NewUserViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
@@ -19,6 +20,7 @@ class NewUserViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     @IBOutlet weak var backToLgnBtn: UIBarButtonItem!
     var userRole = ""
+    var dob = ""
     private var dobPicker : UIDatePicker?
     var roleArray = ["Student", "Teacher", "Admin"]
     
@@ -28,6 +30,8 @@ class NewUserViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         makeNavBarTransparent()
         tapGesture()
         setUpDOBPicker()
+       
+        
     }
     
     @objc func viewTapped(gestureRecognizer: UITapGestureRecognizer){
@@ -49,8 +53,17 @@ class NewUserViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "newUserToWelcome"{
             let secondVC = segue.destination as! WelcomeViewController
-            secondVC.name = nameTxtField.text!
-            secondVC.emailID = emailTxtField.text!
+            
+            let user = UserModel(name: nameTxtField.text!, emailID: emailTxtField.text!, contactNo: Int(contactTextField.text!)!, city: cityTextField.text!, dob: dobTxtField.text!, userRole: .admin)
+            print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\(user)")
+            
+            
+            let userDict : [String : Any] = ["username": user.name, "userEmail" : user.emailID, "contactNo": user.contactNo, "userCity" : user.city, "userDOB": user.dob, "userRole" : userRole] as [String : Any]
+            secondVC.userDict = userDict
+           
+           
+         //   ref.child("users").child("user1").setValue(["userRole": user.userRole])
+            
             
         }
     }
@@ -104,6 +117,7 @@ class NewUserViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM/dd/yyyy"
         dobTxtField.text = dateFormatter.string(from: dobPicker.date)
+      
         
         
     }
@@ -112,5 +126,5 @@ class NewUserViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         self.dismiss(animated: true, completion: nil)
     }
     
-    
+ 
 }

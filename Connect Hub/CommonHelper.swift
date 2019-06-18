@@ -11,11 +11,5 @@ import ARSLineProgress
 
 public class CommonHelper {
   
-    func commonAlert(title : String, msg : String){
-        
-        
-        
-        
-    }
-    
+ 
 }
