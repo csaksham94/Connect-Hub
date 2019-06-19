@@ -11,6 +11,7 @@ import Firebase
 
 class NewUserViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
+    @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var nameTxtField: UITextField!
     @IBOutlet weak var emailTxtField: UITextField!
     @IBOutlet weak var contactTextField: UITextField!
@@ -30,7 +31,7 @@ class NewUserViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         makeNavBarTransparent()
         tapGesture()
         setUpDOBPicker()
-       
+      
         
     }
     

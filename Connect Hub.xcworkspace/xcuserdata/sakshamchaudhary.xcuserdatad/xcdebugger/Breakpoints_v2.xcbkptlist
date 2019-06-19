@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Connect Hub/View Controllers/NewUserViewController.swift"
-            timestampString = "582492856.775828"
+            timestampString = "582668042.645697"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131">
+            startingLineNumber = "132"
+            endingLineNumber = "132">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -56,13 +56,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Connect Hub/View Controllers/NewUserViewController.swift"
-            timestampString = "582492856.776366"
+            timestampString = "582668042.646655"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "prepare(for:sender:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
