@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Connect Hub/View Controllers/NewUserViewController.swift"
-            timestampString = "582876970.076012"
+            timestampString = "582877606.9602979"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "165"
-            endingLineNumber = "165">
+            startingLineNumber = "161"
+            endingLineNumber = "161">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -24,7 +24,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Connect Hub/View Controllers/WelcomeViewController.swift"
-            timestampString = "582876970.0763479"
+            timestampString = "582877606.9607249"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "66"
@@ -40,7 +40,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Connect Hub/View Controllers/LoginViewController.swift"
-            timestampString = "582876970.076398"
+            timestampString = "582877606.960789"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "59"
@@ -56,11 +56,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Connect Hub/View Controllers/NewUserViewController.swift"
-            timestampString = "582876970.076519"
+            timestampString = "582877606.960856"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -72,7 +72,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Connect Hub/View Controllers/WelcomeViewController.swift"
-            timestampString = "582876970.0768909"
+            timestampString = "582877606.961338"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
@@ -88,55 +88,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Connect Hub/View Controllers/LoginViewController.swift"
-            timestampString = "582876970.076946"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Connect_Hub.LoginViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "Connect Hub"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sakshamchaudhary/Documents/Connect%20Hub/Connect%20Hub/View%20Controllers/LoginViewController.swift"
-                  timestampString = "582876923.597946"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "27"
-                  endingLineNumber = "27"
-                  offsetFromSymbolStart = "156">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (__C.FIRDataSnapshot) -&gt; () in Connect_Hub.LoginViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "Connect Hub"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sakshamchaudhary/Documents/Connect%20Hub/Connect%20Hub/View%20Controllers/LoginViewController.swift"
-                  timestampString = "582876923.599807"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "114">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Connect Hub/View Controllers/LoginViewController.swift"
-            timestampString = "582876970.07699"
+            timestampString = "582877606.961454"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
@@ -152,11 +104,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Connect Hub/View Controllers/NewUserViewController.swift"
-            timestampString = "582876970.077031"
+            timestampString = "582877606.9615279"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "registerBtnTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>

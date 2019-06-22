@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class NewUserViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class NewUserViewController: BaseViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     
     @IBOutlet weak var registerBtn: UIButton!
@@ -46,12 +46,8 @@ class NewUserViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         if checkIftextFieldEmpty() == true{
 performSegue(withIdentifier: "newUserToWelcome", sender: self)
         } else {
-            let alert = UIAlertController(title: "Registration Error", message: "Please fill all the mandatory fields...!", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
-                print("Fail OK pressed")
-            }))
            
-            self.present(alert, animated: true, completion: nil)
+          commonErrorfunction(title: "Registration Error", msg: "Please fill all the mandatory fields...!")
         }
             
         }

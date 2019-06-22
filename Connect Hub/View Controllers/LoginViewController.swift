@@ -8,10 +8,9 @@
 
 import UIKit
 import Firebase
-import FirebaseDatabase
 import ARSLineProgress
 
-class LoginViewController: UIViewController {
+class LoginViewController: BaseViewController {
     
     
     @IBOutlet weak var userNameTxtField: UITextField!
@@ -23,10 +22,6 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tapGesture()
-        
-        databaseHandle = ref?.child("userCity").observe(.childAdded, with: { (data) in
-            let newDict : String = data.value as! String
-        })
         
     }
     
@@ -48,27 +43,16 @@ class LoginViewController: UIViewController {
         Auth.auth().signIn(withEmail: userNameTxtField.text!, password: passwordTxtField.text!) { (user, error) in
             if error == nil{
                 
-                
-             
-                
-                // only need to fetch once so use single event
-                
-              
-                
-                
                 ARSLineProgress.hide()
                 print("Success")
                 self.performSegue(withIdentifier: "goToLogin" , sender: self)
             }
             else{
+                
                 print(error!)
                 print("False")
-                let alert = UIAlertController(title: "Login Error", message: "Please check the email ID/Password entered.!", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
-                    print("Fail OK pressed")
-                }))
-                ARSLineProgress.hide()
-                self.present(alert, animated: true, completion: nil)
+                self.commonErrorfunction(title: "Login Error", msg: "Please check the email ID/Password entered.!")
+                
             }
         }
         

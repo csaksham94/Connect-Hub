@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import ARSLineProgress
 
-class WelcomeViewController: UIViewController {
+class WelcomeViewController: BaseViewController {
     
     @IBOutlet weak var letsGoBtn: UIButton!
     @IBOutlet weak var userLabel: UILabel!
@@ -21,9 +21,6 @@ class WelcomeViewController: UIViewController {
     
     //userDict is set in NewUserViewController
     var userDict = [String : Any]()
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,21 +35,18 @@ class WelcomeViewController: UIViewController {
     func configPageDisplay(){
        
         userLabel.text = "\(String(describing: userDict["userEmail"]!))"
-
         welcomeLabel.text = "\(String(describing: userDict["username"]!))"
         
     }
     
     @IBAction func letsGoBtnTapped(_ sender: Any) {
-        
-        
-        
-        
+    
         if passwordField.text == passwordCheckField.text{
             unmatchPasswordLbl.isHidden = true
             sendingCredToFirebase(userName: userLabel.text!, pass: passwordCheckField.text!)
 
         } else {
+            
             unmatchPasswordLbl.isHidden = false
 
         }
@@ -67,22 +61,12 @@ class WelcomeViewController: UIViewController {
             
                 self.storingDataToFirebase()
                 print("Success")
-                let alert = UIAlertController(title: "Registration Successful", message: "Please continue to login..!!", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
-                    self.dismiss(animated: true, completion: nil)
-                }))
-                ARSLineProgress.hide()
-                self.present(alert, animated: true, completion: nil)
+                self.commonErrorfunction(title: "Registration Successful", msg: "Please continue to login..!!")
             }
             else {
                 print(error!)
                 print("Fail")
-                let alert = UIAlertController(title: "Registration Error", message: "Please check the email ID entered.!", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
-                    print("Fail OK pressed")
-                }))
-                ARSLineProgress.hide()
-                self.present(alert, animated: true, completion: nil)
+                self.commonErrorfunction(title: "Registration Error", msg: "Please check the email ID entered.!")
                 
             }
         }
@@ -93,7 +77,6 @@ class WelcomeViewController: UIViewController {
     
     func storingDataToFirebase(){
         
-    
         var ref: DatabaseReference!
         ref = Database.database().reference()
           ref.child("users").child(userDict["username"]! as! String).setValue(userDict)
