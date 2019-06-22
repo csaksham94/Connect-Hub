@@ -40,16 +40,11 @@ class UnableToLoginViewController: BaseViewController {
         Auth.auth().sendPasswordReset(withEmail: emailIDTxtField.text!) { (error) in
             if error == nil{
                 print("Success")
-                
                 self.commonErrorfunction(title: "Reset Email sent Successfully", msg: "Please check your Email ID..!")
-                
-                
                 
             }
             else {
                 print("Fail with Error : \(String(describing: error))")
-                
-                
                 self.commonErrorfunction(title: "Reset Email Failed", msg: "Please check your Email ID..!")
                 
             }

@@ -42,13 +42,9 @@ class LoginViewController: BaseViewController {
         ARSLineProgress.show()
         Auth.auth().signIn(withEmail: userNameTxtField.text!, password: passwordTxtField.text!) { (user, error) in
             if error == nil{
-                
-                ARSLineProgress.hide()
-                print("Success")
-                self.performSegue(withIdentifier: "goToLogin" , sender: self)
+                        self.gettingDataFromFirebase()
             }
             else{
-                
                 print(error!)
                 print("False")
                 self.commonErrorfunction(title: "Login Error", msg: "Please check the email ID/Password entered.!")
@@ -58,7 +54,25 @@ class LoginViewController: BaseViewController {
         
     }
     
-    
+    func gettingDataFromFirebase(){
+        
+        let db = Firestore.firestore()
+        let docRef = db.collection("users").document(self.userNameTxtField.text!)
+        
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                print("Document data: \(dataDescription)")
+                ARSLineProgress.hide()
+                print("Success")
+                self.performSegue(withIdentifier: "goToLogin" , sender: self)
+            } else {
+                print("Document does not exist")
+            }
+        }
+        
+        
+    }
     
 }
 

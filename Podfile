@@ -12,5 +12,6 @@ pod 'Firebase/Database'
 pod 'SVProgressHUD'
 pod 'ChameleonFramework'
 pod 'ARSLineProgress', '~> 3.1'
+pod 'Firebase/Firestore'
 
 end

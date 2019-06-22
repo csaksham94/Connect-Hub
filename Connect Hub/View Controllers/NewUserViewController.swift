@@ -13,9 +13,6 @@ class NewUserViewController: BaseViewController, UIPickerViewDelegate, UIPickerV
     
     
     @IBOutlet weak var registerBtn: UIButton!
-    
-    
-    
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var nameTxtField: UITextField!
     @IBOutlet weak var emailTxtField: UITextField!
@@ -23,12 +20,13 @@ class NewUserViewController: BaseViewController, UIPickerViewDelegate, UIPickerV
     @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var dobTxtField: UITextField!
     @IBOutlet weak var rolePicker: UIPickerView!
-    
     @IBOutlet weak var backToLgnBtn: UIBarButtonItem!
+    
     var userRole = ""
     var dob = ""
     private var dobPicker : UIDatePicker?
     var roleArray = ["Student", "Teacher", "Admin"]
+   
     
     
     override func viewDidLoad() {
@@ -36,8 +34,7 @@ class NewUserViewController: BaseViewController, UIPickerViewDelegate, UIPickerV
         makeNavBarTransparent()
         tapGesture()
         setUpDOBPicker()
-      
-        
+ 
     }
     
     
@@ -46,18 +43,14 @@ class NewUserViewController: BaseViewController, UIPickerViewDelegate, UIPickerV
         if checkIftextFieldEmpty() == true{
 performSegue(withIdentifier: "newUserToWelcome", sender: self)
         } else {
-           
           commonErrorfunction(title: "Registration Error", msg: "Please fill all the mandatory fields...!")
         }
-            
         }
     
     func checkIftextFieldEmpty() -> Bool{
         
         var result : Bool = false
-        
         if (nameTxtField.text != "" && emailTxtField.text != "" && contactTextField.text != "" && cityTextField.text != "" && dobTxtField.text != ""){
-            
             result = true
         }
         return result
@@ -72,6 +65,7 @@ performSegue(withIdentifier: "newUserToWelcome", sender: self)
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(NewUserViewController.viewTapped(gestureRecognizer:)))
         view.addGestureRecognizer(tapGesture)
     }
+    
     func makeNavBarTransparent(){
         navigationController?.navigationBar.isHidden = false
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
@@ -85,18 +79,13 @@ performSegue(withIdentifier: "newUserToWelcome", sender: self)
             let secondVC = segue.destination as! WelcomeViewController
             
             let user = UserModel(name: nameTxtField.text!, emailID: emailTxtField.text!, contactNo: Int(contactTextField.text!)!, city: cityTextField.text!, dob: dobTxtField.text!, userRole: .admin)
-            print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\(user)")
-            
-            
+            print("****************************\(user)")
             let userDict : [String : Any] = ["username": user.name, "userEmail" : user.emailID, "contactNo": user.contactNo, "userCity" : user.city, "userDOB": user.dob, "userRole" : userRole] as [String : Any]
             secondVC.userDict = userDict
-           
-           
-         //   ref.child("users").child("user1").setValue(["userRole": user.userRole])
-            
-            
+       
         }
     }
+    
     //Picker Functions
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -148,8 +137,6 @@ performSegue(withIdentifier: "newUserToWelcome", sender: self)
         dateFormatter.dateFormat = "MM/dd/yyyy"
         dobTxtField.text = dateFormatter.string(from: dobPicker.date)
       
-        
-        
     }
     
     @IBAction func BackToLgnBtnTapped(_ sender: Any) {

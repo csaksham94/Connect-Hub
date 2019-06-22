@@ -44,14 +44,9 @@ class WelcomeViewController: BaseViewController {
         if passwordField.text == passwordCheckField.text{
             unmatchPasswordLbl.isHidden = true
             sendingCredToFirebase(userName: userLabel.text!, pass: passwordCheckField.text!)
-
         } else {
-            
             unmatchPasswordLbl.isHidden = false
-
         }
-
-
     }
     
     func sendingCredToFirebase(userName : String, pass : String){
@@ -76,13 +71,19 @@ class WelcomeViewController: BaseViewController {
     
     
     func storingDataToFirebase(){
+
+        let db = Firestore.firestore()
+        db.collection("users").document(userDict["userEmail"]! as! String).setData(userDict) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+        }
         
-        var ref: DatabaseReference!
-        ref = Database.database().reference()
-          ref.child("users").child(userDict["username"]! as! String).setValue(userDict)
-        
-        
-    }
+    
+    
     @objc func viewTapped(gestureRecognizer: UITapGestureRecognizer){
         view.endEditing(true)
     }
