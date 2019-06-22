@@ -11,6 +11,11 @@ import Firebase
 
 class NewUserViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
+    
+    @IBOutlet weak var registerBtn: UIButton!
+    
+    
+    
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var nameTxtField: UITextField!
     @IBOutlet weak var emailTxtField: UITextField!
@@ -34,6 +39,34 @@ class NewUserViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
       
         
     }
+    
+    
+    @IBAction func registerBtnTapped(_ sender: Any) {
+        
+        if checkIftextFieldEmpty() == true{
+performSegue(withIdentifier: "newUserToWelcome", sender: self)
+        } else {
+            let alert = UIAlertController(title: "Registration Error", message: "Please fill all the mandatory fields...!", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+                print("Fail OK pressed")
+            }))
+           
+            self.present(alert, animated: true, completion: nil)
+        }
+            
+        }
+    
+    func checkIftextFieldEmpty() -> Bool{
+        
+        var result : Bool = false
+        
+        if (nameTxtField.text != "" && emailTxtField.text != "" && contactTextField.text != "" && cityTextField.text != "" && dobTxtField.text != ""){
+            
+            result = true
+        }
+        return result
+    }
+    
     
     @objc func viewTapped(gestureRecognizer: UITapGestureRecognizer){
         view.endEditing(true)

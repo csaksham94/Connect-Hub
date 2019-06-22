@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
 import ARSLineProgress
 
 class LoginViewController: UIViewController {
@@ -17,9 +18,16 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTxtField: UITextField!
     @IBOutlet weak var LoginBtn: UIButton!
     
+    var ref : DatabaseReference?
+    var databaseHandle : DatabaseHandle?
     override func viewDidLoad() {
         super.viewDidLoad()
         tapGesture()
+        
+        databaseHandle = ref?.child("userCity").observe(.childAdded, with: { (data) in
+            let newDict : String = data.value as! String
+        })
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,6 +47,15 @@ class LoginViewController: UIViewController {
         ARSLineProgress.show()
         Auth.auth().signIn(withEmail: userNameTxtField.text!, password: passwordTxtField.text!) { (user, error) in
             if error == nil{
+                
+                
+             
+                
+                // only need to fetch once so use single event
+                
+              
+                
+                
                 ARSLineProgress.hide()
                 print("Success")
                 self.performSegue(withIdentifier: "goToLogin" , sender: self)

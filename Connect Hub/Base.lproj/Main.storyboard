@@ -301,7 +301,7 @@
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="Pu9-pA-cC0" kind="show" identifier="newUserToWelcome" id="HV8-jQ-DGS"/>
+                                                    <action selector="registerBtnTapped:" destination="IbQ-5l-TVG" eventType="touchUpInside" id="F9b-3V-4Fp"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -336,8 +336,10 @@
                         <outlet property="dobTxtField" destination="emm-Ih-S0y" id="2Xh-0I-htf"/>
                         <outlet property="emailTxtField" destination="Nbf-7D-2JI" id="bKw-Ra-6a9"/>
                         <outlet property="nameTxtField" destination="l8Q-qL-LwZ" id="qMU-3e-wGX"/>
+                        <outlet property="registerBtn" destination="Uzn-zM-0M8" id="Mt0-Qr-qzl"/>
                         <outlet property="rolePicker" destination="W0c-Qe-SVQ" id="oW7-Mf-Mx0"/>
                         <outlet property="stackView" destination="FSk-pR-ZEA" id="PIy-Iv-FMr"/>
+                        <segue destination="Pu9-pA-cC0" kind="show" identifier="newUserToWelcome" id="oii-zp-au5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wtV-cU-M6g" userLabel="First Responder" sceneMemberID="firstResponder"/>

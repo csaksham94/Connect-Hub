@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		72493CE522B2D6F500B187E5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 72493CE422B2D6F500B187E5 /* GoogleService-Info.plist */; };
+		72921B0C22BDFF8600E9A9C6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72921B0B22BDFF8600E9A9C6 /* BaseViewController.swift */; };
 		729220E122B6C70D00C5FE7D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729220E022B6C70D00C5FE7D /* UserModel.swift */; };
 		72AF3B9922B6360F0003B4EF /* UnableToLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AF3B9822B6360F0003B4EF /* UnableToLoginViewController.swift */; };
 		72AF3B9B22B63E230003B4EF /* CommonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AF3B9A22B63E230003B4EF /* CommonHelper.swift */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		1B14443E7A12B0883B33F81D /* Pods-Connect Hub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Connect Hub.debug.xcconfig"; path = "Target Support Files/Pods-Connect Hub/Pods-Connect Hub.debug.xcconfig"; sourceTree = "<group>"; };
 		72493CE422B2D6F500B187E5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		72921B0B22BDFF8600E9A9C6 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		729220E022B6C70D00C5FE7D /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		72AF3B9822B6360F0003B4EF /* UnableToLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnableToLoginViewController.swift; sourceTree = "<group>"; };
 		72AF3B9A22B63E230003B4EF /* CommonHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonHelper.swift; sourceTree = "<group>"; };
@@ -69,6 +71,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		72921B0A22BDFF6300E9A9C6 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				72AF3B9A22B63E230003B4EF /* CommonHelper.swift */,
+				72921B0B22BDFF8600E9A9C6 /* BaseViewController.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		729220DF22B6B4DD00C5FE7D /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +91,7 @@
 		72C5A99E22B02B29000E664F = {
 			isa = PBXGroup;
 			children = (
+				72921B0A22BDFF6300E9A9C6 /* Helper */,
 				72C5A9A922B02B29000E664F /* Connect Hub */,
 				72C5A9A822B02B29000E664F /* Products */,
 				4F65FCA7838ADD031C311FDE /* Pods */,
@@ -101,7 +113,6 @@
 				729220DF22B6B4DD00C5FE7D /* Model */,
 				72F7824522B15D9A00FA764C /* View Controllers */,
 				72C5A9AA22B02B29000E664F /* AppDelegate.swift */,
-				72AF3B9A22B63E230003B4EF /* CommonHelper.swift */,
 				72C5A9AE22B02B29000E664F /* Main.storyboard */,
 				72C5A9B122B02B2C000E664F /* Assets.xcassets */,
 				72C5A9B322B02B2C000E664F /* LaunchScreen.storyboard */,
@@ -260,6 +271,7 @@
 				72C5A9AD22B02B29000E664F /* LoginViewController.swift in Sources */,
 				72F7824922B15F1D00FA764C /* WelcomeViewController.swift in Sources */,
 				72F7824722B15DC500FA764C /* NewUserViewController.swift in Sources */,
+				72921B0C22BDFF8600E9A9C6 /* BaseViewController.swift in Sources */,
 				72C5A9AB22B02B29000E664F /* AppDelegate.swift in Sources */,
 				72AF3B9B22B63E230003B4EF /* CommonHelper.swift in Sources */,
 			);

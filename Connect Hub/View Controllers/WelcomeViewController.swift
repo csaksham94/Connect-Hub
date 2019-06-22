@@ -19,6 +19,7 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var passwordCheckField: UITextField!
     
+    //userDict is set in NewUserViewController
     var userDict = [String : Any]()
     
     
@@ -95,7 +96,7 @@ class WelcomeViewController: UIViewController {
     
         var ref: DatabaseReference!
         ref = Database.database().reference()
-        ref.child("users").child(userDict["username"]! as! String).setValue(userDict)
+          ref.child("users").child(userDict["username"]! as! String).setValue(userDict)
         
         
     }
