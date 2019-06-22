@@ -4,13 +4,12 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home-->
         <scene sceneID="25m-LS-Yde">
             <objects>
                 <viewController id="leX-4q-XNq" sceneMemberID="viewController">
@@ -22,14 +21,22 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0l-6W-2US">
+                                <rect key="frame" x="141" y="238" width="133" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="57"/>
+                                <color key="textColor" red="1" green="0.074743433489999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="0gZ-3g-TfK"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="UGx-DD-9Yh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oUK-e6-ZFg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="31.884057971014496" y="-648.21428571428567"/>
+            <point key="canvasLocation" x="942.02898550724649" y="-648.21428571428567"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -58,8 +65,11 @@
                                         <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iE2-0x-vqF">
-                                        <rect key="frame" x="122.66666666666666" y="162" width="55" height="38"/>
+                                        <rect key="frame" x="110" y="162" width="80" height="38"/>
                                         <color key="backgroundColor" red="0.0" green="1" blue="0.92779093980789185" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="S0W-0B-UDR"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                         <state key="normal" title="Login">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -135,7 +145,7 @@
                         <outlet property="LoginBtn" destination="iE2-0x-vqF" id="ZqF-bO-FrS"/>
                         <outlet property="passwordTxtField" destination="ezR-qI-6dh" id="Oqw-bT-yZk"/>
                         <outlet property="userNameTxtField" destination="lJt-3Q-YLX" id="DPQ-y3-nsv"/>
-                        <segue destination="leX-4q-XNq" kind="show" identifier="goToLogin" id="gmf-Lu-Q1t"/>
+                        <segue destination="umP-pr-8oT" kind="show" identifier="goToLogin" id="gmf-Lu-Q1t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -511,10 +521,55 @@
             </objects>
             <point key="canvasLocation" x="31.884057971014496" y="692.41071428571422"/>
         </scene>
+        <!--Location-->
+        <scene sceneID="ij5-r1-tVv">
+            <objects>
+                <viewController id="Jk2-71-3Ik" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bml-vP-4y1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IMG_1107" translatesAutoresizingMaskIntoConstraints="NO" id="flt-ok-zaJ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="b5U-lE-vvV"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Location" image="location" id="a0c-wV-5Ko"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZdA-gO-z0s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1135" y="-658"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="mJy-rw-MLW">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="umP-pr-8oT" customClass="JBTabBarController" customModule="JBTabBarAnimation" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="P1c-4K-wbK" customClass="JBTabBar" customModule="JBTabBarAnimation">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="leX-4q-XNq" kind="relationship" relationship="viewControllers" id="RoV-Uj-Jxr"/>
+                        <segue destination="Jk2-71-3Ik" kind="relationship" relationship="viewControllers" id="mVw-3o-NNJ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="csK-Ia-BPK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="31.884057971014496" y="-648.21428571428567"/>
+        </scene>
     </scenes>
     <resources>
         <image name="168E3A9E-A9FB-429A-8741-5116FC1B779C" width="1080" height="1920"/>
+        <image name="IMG_1107" width="1082" height="1920"/>
         <image name="IMG_1337" width="1080" height="1920"/>
         <image name="IMG_1385" width="1080" height="1920"/>
+        <image name="home" width="30" height="30"/>
+        <image name="location" width="30" height="30"/>
     </resources>
 </document>

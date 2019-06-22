@@ -1,4 +1,4 @@
-platform :ios, '9.0'
+platform :ios, '11.0'
 
 target 'Connect Hub' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
@@ -13,5 +13,6 @@ pod 'SVProgressHUD'
 pod 'ChameleonFramework'
 pod 'ARSLineProgress', '~> 3.1'
 pod 'Firebase/Firestore'
+pod 'JBTabBarAnimation'
 
 end

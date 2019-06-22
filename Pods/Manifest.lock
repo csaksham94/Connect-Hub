@@ -108,6 +108,7 @@ PODS:
     - nanopb (~> 0.3)
   - gRPC-Core/Interface (1.19.0)
   - GTMSessionFetcher/Core (1.2.2)
+  - JBTabBarAnimation (1.0.0)
   - leveldb-library (1.20)
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
@@ -124,6 +125,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Database
   - Firebase/Firestore
+  - JBTabBarAnimation
   - SVProgressHUD
 
 SPEC REPOS:
@@ -144,6 +146,7 @@ SPEC REPOS:
     - "gRPC-C++"
     - gRPC-Core
     - GTMSessionFetcher
+    - JBTabBarAnimation
     - leveldb-library
     - nanopb
     - Protobuf
@@ -166,11 +169,12 @@ SPEC CHECKSUMS:
   "gRPC-C++": 98be881723177d8c4faf5fdffacb582c7b4971a2
   gRPC-Core: bd9472c8daa2e414b9f8038ba667bf56ce0e02b8
   GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
+  JBTabBarAnimation: 34a3d3abc0f53bd3baaa69cb8610be7236aa6d31
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 7a877b7f3e5964e3fce995e2eb323dbc6831bb5a
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 7d710fe9e2da12aa4a4700fef4ac82b6c37fde06
+PODFILE CHECKSUM: f37a7ce391ec610339e7bccef053e6b2a0102ed5
 
 COCOAPODS: 1.6.1

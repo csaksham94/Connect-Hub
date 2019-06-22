@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		722A69FC22BEC78700BCAB25 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722A69FB22BEC78700BCAB25 /* LandingViewController.swift */; };
+		722A69FE22BEC7B100BCAB25 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722A69FD22BEC7B100BCAB25 /* NewViewController.swift */; };
 		72493CE522B2D6F500B187E5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 72493CE422B2D6F500B187E5 /* GoogleService-Info.plist */; };
 		72921B0C22BDFF8600E9A9C6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72921B0B22BDFF8600E9A9C6 /* BaseViewController.swift */; };
 		729220E122B6C70D00C5FE7D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729220E022B6C70D00C5FE7D /* UserModel.swift */; };
@@ -24,6 +26,8 @@
 
 /* Begin PBXFileReference section */
 		1B14443E7A12B0883B33F81D /* Pods-Connect Hub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Connect Hub.debug.xcconfig"; path = "Target Support Files/Pods-Connect Hub/Pods-Connect Hub.debug.xcconfig"; sourceTree = "<group>"; };
+		722A69FB22BEC78700BCAB25 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
+		722A69FD22BEC7B100BCAB25 /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		72493CE422B2D6F500B187E5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		72921B0B22BDFF8600E9A9C6 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		729220E022B6C70D00C5FE7D /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
@@ -129,6 +133,8 @@
 				72F7824622B15DC500FA764C /* NewUserViewController.swift */,
 				72F7824822B15F1D00FA764C /* WelcomeViewController.swift */,
 				72AF3B9822B6360F0003B4EF /* UnableToLoginViewController.swift */,
+				722A69FB22BEC78700BCAB25 /* LandingViewController.swift */,
+				722A69FD22BEC7B100BCAB25 /* NewViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -239,6 +245,7 @@
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/JBTabBarAnimation/JBTabBarAnimation.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
@@ -255,6 +262,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JBTabBarAnimation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
@@ -281,6 +289,8 @@
 				72F7824722B15DC500FA764C /* NewUserViewController.swift in Sources */,
 				72921B0C22BDFF8600E9A9C6 /* BaseViewController.swift in Sources */,
 				72C5A9AB22B02B29000E664F /* AppDelegate.swift in Sources */,
+				722A69FE22BEC7B100BCAB25 /* NewViewController.swift in Sources */,
+				722A69FC22BEC78700BCAB25 /* LandingViewController.swift in Sources */,
 				72AF3B9B22B63E230003B4EF /* CommonHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,7 +441,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5ZRCU5UQKF;
 				INFOPLIST_FILE = "Connect Hub/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -451,7 +461,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5ZRCU5UQKF;
 				INFOPLIST_FILE = "Connect Hub/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

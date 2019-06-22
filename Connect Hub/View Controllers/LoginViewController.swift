@@ -19,9 +19,12 @@ class LoginViewController: BaseViewController {
     
     var ref : DatabaseReference?
     var databaseHandle : DatabaseHandle?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tapGesture()
+        LoginBtn.layer.cornerRadius = 10
         
     }
     
