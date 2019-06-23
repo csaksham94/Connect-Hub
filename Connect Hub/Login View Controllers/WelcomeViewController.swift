@@ -28,6 +28,7 @@ class WelcomeViewController: BaseViewController {
         makeNavBarTransparent()
         configPageDisplay()
         print(userDict)
+        letsGoBtn.layer.cornerRadius = 10
 
     }
     

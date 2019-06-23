@@ -20,6 +20,7 @@ class UnableToLoginViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         makeNavBarTransparent()
+        resetBtn.layer.cornerRadius = 10
        
     }
     

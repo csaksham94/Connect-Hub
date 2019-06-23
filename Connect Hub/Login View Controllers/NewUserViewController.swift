@@ -34,6 +34,8 @@ class NewUserViewController: BaseViewController, UIPickerViewDelegate, UIPickerV
         makeNavBarTransparent()
         tapGesture()
         setUpDOBPicker()
+        registerBtn.layer.cornerRadius = 10
+        
  
     }
     
