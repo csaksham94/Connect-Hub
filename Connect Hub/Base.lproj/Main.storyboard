@@ -524,12 +524,12 @@
         <!--Location-->
         <scene sceneID="ij5-r1-tVv">
             <objects>
-                <viewController id="Jk2-71-3Ik" sceneMemberID="viewController">
+                <viewController id="Jk2-71-3Ik" customClass="LocationViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bml-vP-4y1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IMG_1107" translatesAutoresizingMaskIntoConstraints="NO" id="flt-ok-zaJ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IMG_1107" translatesAutoresizingMaskIntoConstraints="NO" id="flt-ok-zaJ" customClass="lo">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
