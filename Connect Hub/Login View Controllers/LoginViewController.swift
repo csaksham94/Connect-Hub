@@ -17,6 +17,8 @@ class LoginViewController: BaseViewController {
     @IBOutlet weak var passwordTxtField: UITextField!
     @IBOutlet weak var LoginBtn: UIButton!
     
+     var userDict = [String: Any].self
+    
     var ref : DatabaseReference?
     var databaseHandle : DatabaseHandle?
     
@@ -69,6 +71,7 @@ class LoginViewController: BaseViewController {
                 ARSLineProgress.hide()
                 print("Success")
                 self.performSegue(withIdentifier: "goToLogin" , sender: self)
+                
             } else {
                 print("Document does not exist")
             }
@@ -77,5 +80,8 @@ class LoginViewController: BaseViewController {
         
     }
     
-}
+    
+
+    }
+
 

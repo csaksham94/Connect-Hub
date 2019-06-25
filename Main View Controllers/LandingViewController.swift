@@ -9,7 +9,10 @@
 import UIKit
 
 class LandingViewController: UIViewController {
-
+    @IBOutlet weak var welcomeLbl: UILabel!
+    
+    var userDict = [String: Any].self
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         makeNavBarTransparent()

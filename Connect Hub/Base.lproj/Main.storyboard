@@ -12,7 +12,7 @@
         <!--Home-->
         <scene sceneID="25m-LS-Yde">
             <objects>
-                <viewController id="leX-4q-XNq" sceneMemberID="viewController">
+                <viewController id="leX-4q-XNq" customClass="LandingViewController" customModule="Connect_Hub" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cvd-ow-IOE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,6 +27,13 @@
                                 <color key="textColor" red="0.0" green="1" blue="0.92779093980789185" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zjf-vI-mdV">
+                                <rect key="frame" x="72" y="494" width="268.66666666666674" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="65"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.92779093980000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -36,6 +43,9 @@
                         <viewLayoutGuide key="safeArea" id="0gZ-3g-TfK"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="home" id="UGx-DD-9Yh"/>
+                    <connections>
+                        <outlet property="welcomeLbl" destination="Zjf-vI-mdV" id="c30-h8-eon"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oUK-e6-ZFg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -185,18 +195,18 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMW-xK-EH9">
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nak-mP-ivi">
                                         <rect key="frame" x="97" y="224" width="67" height="38"/>
                                         <color key="backgroundColor" red="0.0" green="1" blue="0.92779093980000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="67" id="3kd-nW-OE9"/>
+                                            <constraint firstAttribute="width" constant="67" id="gBx-SP-YL9"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                         <state key="normal" title="Reset">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <connections>
-                                            <action selector="resetBtnTapped:" destination="Qhe-Cm-nTi" eventType="touchUpInside" id="jLd-HZ-sdM"/>
+                                            <action selector="resetBtnTapped:" destination="Qhe-Cm-nTi" eventType="touchUpInside" id="WNo-7F-qt5"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -551,18 +561,59 @@
                                     <outlet property="delegate" destination="Jk2-71-3Ik" id="5zT-bh-iSl"/>
                                 </connections>
                             </mapView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin" translatesAutoresizingMaskIntoConstraints="NO" id="CGY-L5-7JG">
+                                <rect key="frame" x="187" y="388" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="A9e-L2-ed3"/>
+                                    <constraint firstAttribute="width" constant="40" id="uL9-Yd-8bR"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbo-96-IRa">
+                                <rect key="frame" x="0.0" y="773" width="414" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="NbL-st-MIf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMW-xK-EH9">
+                                <rect key="frame" x="327" y="727" width="67" height="38"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.92779093980000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="3kd-nW-OE9"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="67" id="Rew-ya-DNS"/>
+                                    <constraint firstAttribute="height" constant="38" id="gtg-0c-yVi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <state key="normal" title="GO">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="goBtnTapped:" destination="Jk2-71-3Ik" eventType="touchUpInside" id="Dk7-hD-mpr"/>
+                                    <action selector="resetBtnTapped:" destination="Qhe-Cm-nTi" eventType="touchUpInside" id="jLd-HZ-sdM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ESK-Th-DKC" firstAttribute="bottom" secondItem="b5U-lE-vvV" secondAttribute="bottom" id="4wy-vB-bTS"/>
+                            <constraint firstItem="qbo-96-IRa" firstAttribute="leading" secondItem="b5U-lE-vvV" secondAttribute="leading" id="AH9-ku-Yfr"/>
+                            <constraint firstItem="qbo-96-IRa" firstAttribute="trailing" secondItem="b5U-lE-vvV" secondAttribute="trailing" id="ByG-fm-EcE"/>
+                            <constraint firstItem="CGY-L5-7JG" firstAttribute="centerY" secondItem="bml-vP-4y1" secondAttribute="centerY" constant="-40" id="FQj-jG-Gzi"/>
                             <constraint firstItem="ESK-Th-DKC" firstAttribute="leading" secondItem="b5U-lE-vvV" secondAttribute="leading" id="IRy-V2-vgl"/>
                             <constraint firstItem="ESK-Th-DKC" firstAttribute="top" secondItem="bml-vP-4y1" secondAttribute="top" id="IbA-lx-zAO"/>
+                            <constraint firstItem="qbo-96-IRa" firstAttribute="bottom" secondItem="b5U-lE-vvV" secondAttribute="bottom" id="IwK-FY-py6"/>
                             <constraint firstItem="ESK-Th-DKC" firstAttribute="trailing" secondItem="b5U-lE-vvV" secondAttribute="trailing" id="UTd-VL-Rua"/>
+                            <constraint firstItem="qbo-96-IRa" firstAttribute="top" secondItem="eMW-xK-EH9" secondAttribute="bottom" constant="8" id="Xyk-Rz-urk"/>
+                            <constraint firstItem="CGY-L5-7JG" firstAttribute="centerX" secondItem="bml-vP-4y1" secondAttribute="centerX" id="nXe-ae-m99"/>
+                            <constraint firstItem="b5U-lE-vvV" firstAttribute="trailing" secondItem="eMW-xK-EH9" secondAttribute="trailing" constant="20" id="y9p-LH-ksK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="b5U-lE-vvV"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Location" image="location" id="a0c-wV-5Ko"/>
                     <connections>
+                        <outlet property="addressLabel" destination="qbo-96-IRa" id="MxF-D8-dP0"/>
+                        <outlet property="goBtn" destination="eMW-xK-EH9" id="onb-hW-U47"/>
                         <outlet property="mapView" destination="ESK-Th-DKC" id="QpB-T7-SDh"/>
                     </connections>
                 </viewController>
@@ -596,5 +647,6 @@
         <image name="IMG_1337" width="1080" height="1920"/>
         <image name="home" width="30" height="30"/>
         <image name="location" width="30" height="30"/>
+        <image name="pin" width="33.333332061767578" height="33.333332061767578"/>
     </resources>
 </document>
