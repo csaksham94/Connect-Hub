@@ -17,9 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IMG_1337" translatesAutoresizingMaskIntoConstraints="NO" id="On1-u3-Q1c">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_1337" translatesAutoresizingMaskIntoConstraints="NO" id="On1-u3-Q1c">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0l-6W-2US">
                                 <rect key="frame" x="72.666666666666657" y="410" width="268.66666666666674" height="76"/>
@@ -37,7 +36,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="On1-u3-Q1c" firstAttribute="top" secondItem="cvd-ow-IOE" secondAttribute="top" id="7kb-xE-ZFh"/>
                             <constraint firstItem="a0l-6W-2US" firstAttribute="centerX" secondItem="cvd-ow-IOE" secondAttribute="centerX" id="CrX-B9-f7x"/>
+                            <constraint firstItem="On1-u3-Q1c" firstAttribute="leading" secondItem="0gZ-3g-TfK" secondAttribute="leading" id="QgY-CC-nW7"/>
+                            <constraint firstItem="On1-u3-Q1c" firstAttribute="trailing" secondItem="0gZ-3g-TfK" secondAttribute="trailing" id="eIW-0I-ydr"/>
+                            <constraint firstAttribute="bottom" secondItem="On1-u3-Q1c" secondAttribute="bottom" id="lrm-yY-UVA"/>
                             <constraint firstItem="a0l-6W-2US" firstAttribute="centerY" secondItem="cvd-ow-IOE" secondAttribute="centerY" id="vjM-fn-t6t"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0gZ-3g-TfK"/>
@@ -50,6 +53,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oUK-e6-ZFg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="942.02898550724649" y="-648.21428571428567"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="Szx-ow-SNl">
+            <objects>
+                <viewController id="Rif-aa-ngf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RUG-sH-1ZH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_1107" translatesAutoresizingMaskIntoConstraints="NO" id="tFn-FB-fYT">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tFn-FB-fYT" firstAttribute="leading" secondItem="ZiQ-z5-r7L" secondAttribute="leading" id="6lp-sq-FiT"/>
+                            <constraint firstAttribute="bottom" secondItem="tFn-FB-fYT" secondAttribute="bottom" id="Dyl-Ib-dat"/>
+                            <constraint firstItem="tFn-FB-fYT" firstAttribute="top" secondItem="RUG-sH-1ZH" secondAttribute="top" id="Ehl-sE-z1A"/>
+                            <constraint firstItem="tFn-FB-fYT" firstAttribute="trailing" secondItem="ZiQ-z5-r7L" secondAttribute="trailing" id="e5s-Kr-VUc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZiQ-z5-r7L"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="user" id="gxK-3U-5GO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VZ5-sF-4qR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1647.826086956522" y="-655.58035714285711"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -633,6 +663,7 @@
                         <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <segue destination="Rif-aa-ngf" kind="relationship" relationship="viewControllers" id="SRL-Ny-1nO"/>
                         <segue destination="leX-4q-XNq" kind="relationship" relationship="viewControllers" id="RoV-Uj-Jxr"/>
                         <segue destination="Jk2-71-3Ik" kind="relationship" relationship="viewControllers" id="mVw-3o-NNJ"/>
                     </connections>
@@ -644,9 +675,11 @@
     </scenes>
     <resources>
         <image name="168E3A9E-A9FB-429A-8741-5116FC1B779C" width="1080" height="1920"/>
+        <image name="IMG_1107" width="1082" height="1920"/>
         <image name="IMG_1337" width="1080" height="1920"/>
         <image name="home" width="30" height="30"/>
         <image name="location" width="30" height="30"/>
         <image name="pin" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="user" width="30" height="30"/>
     </resources>
 </document>

@@ -33,10 +33,12 @@ class LocationViewController: BaseViewController{
     
     func resetMapView(withNew directions: MKDirections) {
     
-        mapView.removeOverlay(mapView!.overlays)
+        mapView.removeOverlays(mapView!.overlays)
+        
         directionsArray.append(directions)
-        let _ = directionsArray.map {$0.cancel()}
-        directionsArray.remove(at: 1)
+         let _ = directionsArray.map {$0.cancel()}
+       
+     //   directionsArray.remove(directio)
  
         
     }
@@ -57,7 +59,7 @@ class LocationViewController: BaseViewController{
             guard let response = response else{return}
 
             for route in response.routes{
-                let steps = route.steps
+               // let steps = route.steps
                 self.mapView.addOverlay(route.polyline)
                 self.mapView.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
             }
