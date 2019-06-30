@@ -57,7 +57,7 @@
         <!--Profile-->
         <scene sceneID="Szx-ow-SNl">
             <objects>
-                <viewController id="Rif-aa-ngf" sceneMemberID="viewController">
+                <viewController id="Rif-aa-ngf" customClass="ProfileViewController" customModule="Connect_Hub" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RUG-sH-1ZH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -663,8 +663,8 @@
                         <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Rif-aa-ngf" kind="relationship" relationship="viewControllers" id="SRL-Ny-1nO"/>
                         <segue destination="leX-4q-XNq" kind="relationship" relationship="viewControllers" id="RoV-Uj-Jxr"/>
+                        <segue destination="Rif-aa-ngf" kind="relationship" relationship="viewControllers" id="SRL-Ny-1nO"/>
                         <segue destination="Jk2-71-3Ik" kind="relationship" relationship="viewControllers" id="mVw-3o-NNJ"/>
                     </connections>
                 </tabBarController>

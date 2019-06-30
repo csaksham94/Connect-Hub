@@ -13,6 +13,7 @@ public class JBTabBarController: UITabBarController {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
+        tabBarController?.selectedIndex = 1
     }
     
     override public func viewDidAppear(_ animated: Bool) {

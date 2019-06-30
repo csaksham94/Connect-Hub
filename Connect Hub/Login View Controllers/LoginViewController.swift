@@ -18,7 +18,7 @@ class LoginViewController: BaseViewController {
     @IBOutlet weak var LoginBtn: UIButton!
     
      var userDict = [String: Any].self
-    
+     var dataDescription : [String : Any] = [:]
     var ref : DatabaseReference?
     var databaseHandle : DatabaseHandle?
     
@@ -66,9 +66,11 @@ class LoginViewController: BaseViewController {
         
         docRef.getDocument { (document, error) in
             if let document = document, document.exists {
-                let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
-                print("Document data: \(dataDescription)")
+                self.dataDescription = document.data()!
+                print("Document data: \(String(describing: self.dataDescription))")
+                
                 ARSLineProgress.hide()
+            
                 print("Success")
                 self.performSegue(withIdentifier: "goToLogin" , sender: self)
                 
@@ -80,6 +82,10 @@ class LoginViewController: BaseViewController {
         
     }
     
+ 
+ 
+    
+    //let dict = convertToDictionary(text: str)
     
 
     }
